@@ -50,6 +50,10 @@ The UPSA Peer Tutoring System is a web application designed to facilitate peer t
 
 ## Contributing
 
+We would like to extend our thanks to the following individuals who have contributed to the development of this project:
+
+- [Elian Assamoah-Cobbiah](https://github.com/elian2022)
+
 If you would like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
