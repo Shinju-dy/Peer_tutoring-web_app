@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #e5effa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 30px;
+    width: 800px; /* Updated width */
+    height: 400px; /* Added height */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Added to evenly distribute the content vertically */
+}
+
+
+.profile-container h2 {
+    margin-bottom: 20px;
+    color: black;
+    position: relative;
+    font-weight: 600;
+ 
+}
+
+.profile-container h2::after {
+    content: ""; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 4px; 
+    width: 30px;
+    border-radius: 5px;
+    background-color:  #e6a707d2;; 
+}
+
+.profile-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-container strong {
+    font-weight:600;
+    color:black;
+
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%; /* Reduce width on small devices */
+        height: 500px; /* Auto-adjust the height based on content */
+        padding: 20px; /* Reduce padding on small devices */
+    }
+
+    .profile-container p {
+        font-size: 16px; /* Reduce font size on small devices */
+    }
+
+    .profile-container h2::after {
+        width: 50px; /* Adjust the width of the yellow bar for small devices */
+    }
+
+    /* Add any additional responsive styles for other elements if needed */
+}

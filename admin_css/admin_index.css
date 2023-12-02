@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.error-message {
+    /* Add the following line */
+    z-index: 10;
+    /* Keep the other styles */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+
+
+
+.contain{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(21, 21, 41, 0.454), rgba(0, 0, 50, 0.438)), url(../Images/pexels-fauxels-3183198.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form-box{
+    width:100%;
+    max-width: 450px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background:#fff;
+    padding: 10px 50px;
+    text-align: center;
+    border-radius:30px ;
+    padding-top: 30px;
+}
+
+.input-field{
+    background: #069df533 ;
+    margin: 15px 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: solid 2px #069df533 ;
+    position: relative; /* Add this line */
+ 
+}
+
+input{
+    width: 100%;
+    background-color: transparent;
+    background: transparent; 
+    border: 0;
+    outline: 0;
+    padding: 15px 12px;
+    -webkit-appearance: none;
+    appearance: none;
+   
+}
+
+.input-field i{
+    margin-left:15px;
+    color: #e6a707;
+}
+
+
+a:hover{
+    color: #000000;
+}
+
+a{
+    text-decoration: none;
+    color: #999;
+    font-size: 15px;
+}
+
+.btn-field{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top:0px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.btn-field input{
+    flex-basis:48%;
+    background: #069df5;
+    color:#fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor:pointer;
+    transition:0.5s;
+    padding-top: 14px;
+}
+
+.input-group{
+    height:280px ;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 50px;
+}
+
+.btn-field input:hover{
+    background: #e6a507;
+}
+
+/* Add the new CSS styles */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    left: 300px; /* Change this line */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.fa-eye, .fa-eye-slash {
+    font-size: 15px;
+}
+
+p{
+    padding-top: 8px;
+}
+
+
+@media screen and (max-width:400px) {
+    .form-box{
+        width:100%;
+    }
+
+    h3{
+        font-size: 1rem;
+        text-align:center;
+        margin-top: 4%;
+    }
+
+    .input-group{
+        margin-top: 10%;
+    }
+
+    .form-box h3::after{
+        bottom: 82%;
+    }
+}
+
+

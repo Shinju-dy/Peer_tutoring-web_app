@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+
+*{ 
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+  }
+
+  
+  header {
+    background-color: #e6a507;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-right: 20px;
+    position: relative;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+li a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+li a:hover::before {
+    width: 100%;
+}
+
+img {
+    height: 50px;
+}
+
+h1{
+  margin-bottom: 20px;
+
+}
+
+  
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type=text], input[type=password], input[type=email] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px}
+  
+    table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+  
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+  
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+
+    button{
+        background-color: #e6a707;
+        border-radius: 4px;
+        border: 1px solid #000;
+    }
+
+    button:hover{
+       background-color:#069df5f9;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+      }
+      
+      .approve-btn {
+        flex-basis: 48%;
+        height: 40px;
+        background-color: #2ecc71;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        display: inline-block; /* Add this line */
+      }
+      
+      .decline-btn {
+        flex-basis: 48%;
+        height: 40px;
+        background-color: #dc3545;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        display: inline-block; /* Add this line */
+      }
+
+      /* Add styles for the search form */
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+input[type="search"] {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 45%; /* Adjust this value to set the width of the search input field */
+}
+
+
+.search-btn {
+  background-color: #e6a507;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+.search-btn:hover {
+  background-color: #069df5f9;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* Hide nav menu on small screens */
+nav ul {
+  display: flex;
+}
+
+.container.menu-toggled {
+  padding-top: calc(20px + 50%);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  border-radius: 12px;
+  margin-left: 5px;
+}
+
+
+
+/* Responsive design for small devices */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  li a {
+    font-size: 14px;
+  }
+
+  img {
+    height: 40px;
+  }
+
+  input[type="search"] {
+    width: 100%; /* Set the width of the search input field on smaller screens */
+  }
+
+  .search-btn {
+    flex-basis: calc(50% - 5px);
+    justify-self: flex-start;
+  }
+
+  header {
+    position: relative;
+    transition: height 0.3s ease;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #e6a507;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+  }
+
+  /* Adjust header height when the .show-menu class is added to the ul */
+  header.show-menu {
+    height: 100%;
+  }
+
+  /* Show the navigation menu when the .show-menu class is added to the ul */
+  nav ul.show-menu {
+    display: flex;
+  }
+}
+

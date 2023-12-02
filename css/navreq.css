@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ *{
+    margin:0;
+    padding:0;
+    outline:none;
+    border:none;
+    text-decoration:none;
+    box-sizing:border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+#menu-bar{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 4%;
+    top: 4%;
+    }
+
+
+nav{
+    position:fixed;
+    top:0;
+    bottom:0;
+    height:100vh;
+    left:0;
+    background:#069df5f9;
+    width:90px;
+    overflow:hidden;
+     transition:0.2s;  
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+     z-index: 9999;
+} 
+
+nav:hover{
+    width: 280px;
+     transition:1s;
+}
+
+.logo{
+    text-align:center;
+    display:flex;
+    margin:10px 0 0 10px;
+    padding-bottom: 3rem;
+}
+
+.logo img{
+    width: 45px;
+    height:45px;
+    border-radius:50%;
+}
+
+
+ .logo span{
+    font-weight:bold;
+    padding-left:15px;
+    font-size:18px;
+    text-transform: none;
+}
+a{
+   position:relative;
+   color:black;
+   font-size:16px;
+   display:table;
+   width:280px;
+   padding:10px;
+   margin-bottom: 4%;
+   
+}
+
+a .fas{
+    color:#e6a707d2;
+}
+
+nav a .fas {
+    top: 20px;
+}
+
+nav .fas{
+   position:relative;
+   width:70px;
+   height:40px;
+   /* top: 30px; */
+   font-size:20px;
+   text-align: center;
+  
+}
+
+ .nav-item{
+    position:relative;
+    top:9px;
+    margin-left:10px;
+ }
+
+ nav a:hover{
+    background:#fff;
+} 
+
+a:hover i{
+    color:#34AFcD;
+    transform: 0.5s;
+} 
+
+ .logout{
+    position:absolute;
+    bottom:30px;
+ }
+
+  .contains{
+    display:flex;
+ }  
+
+ /* main section */
+  .main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .main-top i{
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+  } 
+
+  .badge-notification {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px 6px;
+    position: absolute;
+    top: 5px;
+    right: 200px; /* Adjust the value to your preference */
+    /* right: -5px; */
+    display: none;
+  }
+
+  /*Changes made here*/
+
+ @media screen and (max-width:1108px) {
+
+#menu-bar{
+    display: block; 
+     cursor: pointer;
+     color: #093b58cc;
+     position: fixed;
+     right: 4%;
+     top: 4%;
+     font-size: 32px;
+     }
+ 
+ 
+ .nav{
+     position:fixed;
+     top:0;
+     bottom:0;
+     height:100vh;
+     left:0;
+     background:#069df5cc;
+     width:0px;
+     overflow:hidden;
+     transition:0.2s;  
+     box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+     z-index: 999;
+ }
+ 
+ .nav.active{
+     width: 280px;
+     transition:1s;
+ } 
+ 
+ 
+ .fa-times{
+     color: black;
+     z-index: 999;
+ }
+ 
+ }

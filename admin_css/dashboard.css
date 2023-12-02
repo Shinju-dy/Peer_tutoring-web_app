@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); 
+
+*{ 
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+  }
+
+  header {
+    background-color: #e6a507;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-right: 20px;
+    position: relative;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+
+li a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+li a:hover::before {
+    width: 100%;
+}
+
+img {
+    height: 50px;
+}
+
+body{
+    background-color: #e8f0fe;
+}
+
+  
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+  /* Add these styles to your dashboard.css */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 150px;
+    padding: 20px;
+    /* border: 1px solid #3f84fc; */
+    background-color: 
+    #3f84fc;
+    border-right: 7px solid white;
+    
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 150px;
+    padding: 20px;
+    /* border: 1px solid #fc413f; */
+    background-color: #fc413f;
+    border-right: 7px solid white;
+    
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 150px;
+    padding: 20px;
+    /* border: 1px solid #1dab47; */
+    background-color: 
+    #1dab47;
+    border-right: 7px solid white;
+    
+}
+
+
+.title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color:#fff;
+    margin-right: 65%;
+}
+.value {
+    font-size: 1.5em;
+}
+
+.charts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.chart-container {
+    flex: 1;
+    width: 100%;
+    max-width: 500px; /* Adjust the maximum width to control chart size */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.chart-container canvas {
+    width: 100%;
+    max-height: 360px; /* Adjust the maximum height to control chart size */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+  
+  /* Hide nav menu on small screens */
+  nav ul {
+    display: flex;
+  }
+
+  .container.menu-toggled {
+    padding-top: calc(20px + 50%);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border-radius: 12px;
+    margin-left: 5px;
+}
+  
+
+
+/* Add this media query to your dashboard.css */
+@media (max-width: 768px) {
+    .title {
+      font-size: 1em;
+      margin-bottom: 30px;
+      margin-right: 50%;
+    }
+
+    .charts-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        max-width: 100%;
+    }
+
+    .chart-container canvas {
+        max-height: 250px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .box1, .box2, .box3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .box1 {
+        border-right: none;
+    }
+
+    .box2 {
+        border-right: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 0.8em;
+      margin-bottom: 20px;
+      margin-right: 35%;
+    }
+
+    /* Responsive design */
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      position: relative;
+      transition: height 0.3s ease;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    nav ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #e6a507;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+    }
+  
+    /* Adjust header height when the .show-menu class is added to the ul */
+    header.show-menu {
+      height: 100%;
+    }
+  
+    /* Show the navigation menu when the .show-menu class is added to the ul */
+    nav ul.show-menu {
+      display: flex;
+    }
+  }
+  
+
+
+  
