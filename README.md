@@ -17,6 +17,7 @@ The UPSA Peer Tutoring System is a web application designed to facilitate peer t
 ## Technologies Used
 
 - PHP
+- SQL
 - XAMPP
 - CSS
 - HTML
