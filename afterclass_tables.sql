@@ -1,3 +1,4 @@
+#Creating tables
 CREATE TABLE users (
   id VARCHAR(10) PRIMARY KEY,
   index_number VARCHAR(10),
