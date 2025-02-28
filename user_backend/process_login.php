@@ -3,7 +3,7 @@ ini_set('session.cookie_httponly', 1);
 session_start();
 include('../php/config.php');
 
-// Check if the form has been submitted
+// Check if the form has been submitted to db
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $index_number = $_POST['index_number'];
     $password = $_POST['password'];
